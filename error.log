@@ -1,0 +1,269 @@
+[19-Aug-2025 10:15:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /var/www/html/error-dashboard/public/index.php:12
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/error-dashboard/public/index.php on line 12
+
+[19-Aug-2025 10:16:01 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:17:22 UTC] PHP Notice:  Undefined variable: user in /var/www/html/error-dashboard/resources/views/dashboard.blade.php on line 8
+
+[19-Aug-2025 10:18:10 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 22
+[19-Aug-2025 10:19:05 UTC] PHP Warning:  Division by zero in /var/www/html/error-dashboard/app/Services/MathService.php on line 33
+
+[19-Aug-2025 10:19:45 UTC] PHP Notice:  Undefined index: email in /var/www/html/error-dashboard/app/Models/User.php on line 56
+
+[19-Aug-2025 10:20:12 UTC] PHP Fatal error:  Uncaught Exception: Unable to connect to database in /var/www/html/error-dashboard/config/database.php:17
+Stack trace:
+#0 /var/www/html/error-dashboard/public/index.php(20): require()
+#1 {main}
+    thrown in /var/www/html/error-dashboard/config/database.php on line 17
+
+[19-Aug-2025 10:21:01 UTC] PHP Warning:  file_get_contents(/tmp/data.txt): failed to open stream: No such file or directory in /var/www/html/error-dashboard/app/Helpers/FileHelper.php on line 10
+
+[19-Aug-2025 10:21:45 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/error-dashboard/app/Controllers/UserController.php on line 78
+
+[19-Aug-2025 10:22:30 UTC] PHP Deprecated:  The each() function is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 30
+
+[19-Aug-2025 10:23:15 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /var/www/html/error-dashboard/public/index.php on line 5
+
+[19-Aug-2025 10:24:01 UTC] PHP Notice:  Undefined variable: errors in /var/www/html/error-dashboard/resources/views/errors.blade.php on line 3
+
+[19-Aug-2025 10:24:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:25:30 UTC] PHP Fatal error:  Uncaught Error: Class 'PDO' not found in /var/www/html/error-dashboard/app/Models/Database.php:8
+Stack trace:
+#0 {main}
+    thrown in /var/www/html/error-dashboard/app/Models/Database.php on line 8
+
+[19-Aug-2025 10:26:10 UTC] PHP Notice:  Undefined variable: config in /var/www/html/error-dashboard/config/app.php on line 2
+
+[19-Aug-2025 10:26:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:27:40 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 40
+
+[19-Aug-2025 10:28:25 UTC] PHP Notice:  Undefined variable: message in /var/www/html/error-dashboard/resources/views/partials/alert.blade.php on line 1
+
+[19-Aug-2025 10:29:10 UTC] PHP Warning:  fopen(/tmp/log.txt): failed to open stream: Permission denied in /var/www/html/error-dashboard/app/Helpers/FileHelper.php on line 22
+
+[19-Aug-2025 10:29:55 UTC] PHP Notice:  Undefined offset: 0 in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 50
+
+[19-Aug-2025 10:30:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function json_encode() in /var/www/html/error-dashboard/app/Helpers/JsonHelper.php:5
+Stack trace:
+#0 {main}
+    thrown in /var/www/html/error-dashboard/app/Helpers/JsonHelper.php on line 5
+
+[19-Aug-2025 10:31:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:32:10 UTC] PHP Notice:  Undefined variable: status in /var/www/html/error-dashboard/resources/views/status.blade.php on line 4
+
+[19-Aug-2025 10:32:55 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 50
+
+[19-Aug-2025 10:33:40 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /var/www/html/error-dashboard/public/index.php on line 5
+
+[19-Aug-2025 10:34:25 UTC] PHP Notice:  Undefined variable: title in /var/www/html/error-dashboard/resources/views/layouts/app.blade.php on line 7
+
+[19-Aug-2025 10:35:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:35:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_strlen() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:12
+Stack trace:
+#0 {main}
+    thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 12
+
+[19-Aug-2025 10:36:40 UTC] PHP Notice:  Undefined variable: data in /var/www/html/error-dashboard/resources/views/data.blade.php on line 2
+
+[19-Aug-2025 10:37:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:38:10 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 60
+
+[19-Aug-2025 10:38:55 UTC] PHP Notice:  Undefined variable: logs in /var/www/html/error-dashboard/resources/views/logs.blade.php on line 5
+
+[19-Aug-2025 10:39:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+
+[19-Aug-2025 10:40:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php:3
+Stack trace:
+#0 {main}
+    thrown in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php on line 3
+    [19-Aug-2025 10:41:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 10:41:55 UTC] PHP Notice:  Undefined variable: userId in /var/www/html/error-dashboard/resources/views/profile.blade.php on line 10
+    [19-Aug-2025 10:42:40 UTC] PHP Deprecated:  Function each() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 70
+    [19-Aug-2025 10:43:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreate() in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php:15
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php on line 15
+    [19-Aug-2025 10:44:10 UTC] PHP Warning:  file_put_contents(/tmp/output.txt): failed to open stream: Permission denied in /var/www/html/error-dashboard/app/Helpers/FileHelper.php on line 30
+    [19-Aug-2025 10:44:55 UTC] PHP Notice:  Undefined variable: settings in /var/www/html/error-dashboard/resources/views/settings.blade.php on line 2
+    [19-Aug-2025 10:45:40 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 80
+    [19-Aug-2025 10:46:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 10:47:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function openssl_encrypt() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:22
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 22
+    [19-Aug-2025 10:47:55 UTC] PHP Notice:  Undefined variable: token in /var/www/html/error-dashboard/resources/views/auth.blade.php on line 6
+    [19-Aug-2025 10:48:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 10:49:25 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 90
+    [19-Aug-2025 10:50:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_convert_encoding() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:20
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 20
+    [19-Aug-2025 10:50:55 UTC] PHP Notice:  Undefined variable: posts in /var/www/html/error-dashboard/resources/views/posts.blade.php on line 3
+    [19-Aug-2025 10:51:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 10:52:25 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 100
+    [19-Aug-2025 10:53:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function iconv() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:25
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 25
+    [19-Aug-2025 10:53:55 UTC] PHP Notice:  Undefined variable: comments in /var/www/html/error-dashboard/resources/views/comments.blade.php on line 4
+    [19-Aug-2025 10:54:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 10:55:25 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 110
+    [19-Aug-2025 10:56:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function hash() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:30
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 30
+    [19-Aug-2025 10:56:55 UTC] PHP Notice:  Undefined variable: profile in /var/www/html/error-dashboard/resources/views/profile.blade.php on line 12
+    [19-Aug-2025 10:57:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 10:58:25 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 120
+    [19-Aug-2025 10:59:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function gd_info() in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php:35
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php on line 35
+    [19-Aug-2025 10:59:55 UTC] PHP Notice:  Undefined variable: notifications in /var/www/html/error-dashboard/resources/views/notifications.blade.php on line 2
+    [19-Aug-2025 11:00:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:01:25 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 130
+    [19-Aug-2025 11:02:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_exec() in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php:10
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php on line 10
+    [19-Aug-2025 11:02:55 UTC] PHP Notice:  Undefined variable: files in /var/www/html/error-dashboard/resources/views/files.blade.php on line 7
+    [19-Aug-2025 11:03:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:04:25 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 140
+    [19-Aug-2025 11:05:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function password_hash() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:40
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 40
+    [19-Aug-2025 11:05:55 UTC] PHP Notice:  Undefined variable: categories in /var/www/html/error-dashboard/resources/views/categories.blade.php on line 5
+    [19-Aug-2025 11:06:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:07:25 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 150
+    [19-Aug-2025 11:08:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function json_decode() in /var/www/html/error-dashboard/app/Helpers/JsonHelper.php:10
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/JsonHelper.php on line 10
+    [19-Aug-2025 11:08:55 UTC] PHP Notice:  Undefined variable: tags in /var/www/html/error-dashboard/resources/views/tags.blade.php on line 3
+    [19-Aug-2025 11:09:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:10:25 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 160
+    [19-Aug-2025 11:11:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function filter_var() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:50
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 50
+    [19-Aug-2025 11:11:55 UTC] PHP Notice:  Undefined variable: items in /var/www/html/error-dashboard/resources/views/items.blade.php on line 8
+    [19-Aug-2025 11:12:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:13:25 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 170
+    [19-Aug-2025 11:14:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function session_id() in /var/www/html/error-dashboard/public/index.php:25
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/public/index.php on line 25
+    [19-Aug-2025 11:14:55 UTC] PHP Notice:  Undefined variable: address in /var/www/html/error-dashboard/resources/views/address.blade.php on line 2
+    [19-Aug-2025 11:15:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:16:25 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 180
+    [19-Aug-2025 11:17:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_substr() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:35
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 35
+    [19-Aug-2025 11:17:55 UTC] PHP Notice:  Undefined variable: phone in /var/www/html/error-dashboard/resources/views/phone.blade.php on line 4
+    [19-Aug-2025 11:18:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:19:25 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 190
+    [19-Aug-2025 11:20:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function random_bytes() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:60
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 60
+    [19-Aug-2025 11:20:55 UTC] PHP Notice:  Undefined variable: order in /var/www/html/error-dashboard/resources/views/order.blade.php on line 6
+    [19-Aug-2025 11:21:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:22:25 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 200
+    [19-Aug-2025 11:23:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function openssl_decrypt() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:70
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 70
+    [19-Aug-2025 11:23:55 UTC] PHP Notice:  Undefined variable: invoice in /var/www/html/error-dashboard/resources/views/invoice.blade.php on line 2
+    [19-Aug-2025 11:24:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:25:25 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 210
+    [19-Aug-2025 11:26:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagepng() in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php:45
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php on line 45
+    [19-Aug-2025 11:26:55 UTC] PHP Notice:  Undefined variable: shipment in /var/www/html/error-dashboard/resources/views/shipment.blade.php on line 3
+    [19-Aug-2025 11:27:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:28:25 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 220
+    [19-Aug-2025 11:29:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_strtolower() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:45
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 45
+    [19-Aug-2025 11:29:55 UTC] PHP Notice:  Undefined variable: payment in /var/www/html/error-dashboard/resources/views/payment.blade.php on line 5
+    [19-Aug-2025 11:30:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:31:25 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 230
+    [19-Aug-2025 11:32:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function password_verify() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:80
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 80
+    [19-Aug-2025 11:32:55 UTC] PHP Notice:  Undefined variable: review in /var/www/html/error-dashboard/resources/views/review.blade.php on line 7
+    [19-Aug-2025 11:33:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:34:25 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 240
+    [19-Aug-2025 11:35:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_setopt() in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php:20
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php on line 20
+    [19-Aug-2025 11:35:55 UTC] PHP Notice:  Undefined variable: feedback in /var/www/html/error-dashboard/resources/views/feedback.blade.php on line 2
+    [19-Aug-2025 11:36:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:37:25 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 250
+    [19-Aug-2025 11:38:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagejpeg() in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php:55
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php on line 55
+    [19-Aug-2025 11:38:55 UTC] PHP Notice:  Undefined variable: coupon in /var/www/html/error-dashboard/resources/views/coupon.blade.php on line 4
+    [19-Aug-2025 11:39:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:40:25 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 260
+    [19-Aug-2025 11:41:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_strtoupper() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:55
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 55
+    [19-Aug-2025 11:41:55 UTC] PHP Notice:  Undefined variable: wishlist in /var/www/html/error-dashboard/resources/views/wishlist.blade.php on line 6
+    [19-Aug-2025 11:42:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:43:25 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 270
+    [19-Aug-2025 11:44:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function openssl_random_pseudo_bytes() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:90
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 90
+    [19-Aug-2025 11:44:55 UTC] PHP Notice:  Undefined variable: subscription in /var/www/html/error-dashboard/resources/views/subscription.blade.php on line 2
+    [19-Aug-2025 11:45:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:46:25 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 280
+    [19-Aug-2025 11:47:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function curl_close() in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php:30
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ApiHelper.php on line 30
+    [19-Aug-2025 11:47:55 UTC] PHP Notice:  Undefined variable: cart in /var/www/html/error-dashboard/resources/views/cart.blade.php on line 3
+    [19-Aug-2025 11:48:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:49:25 UTC] PHP Deprecated:  Function ereg() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 290
+    [19-Aug-2025 11:50:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagegif() in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php:65
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/ImageHelper.php on line 65
+    [19-Aug-2025 11:50:55 UTC] PHP Notice:  Undefined variable: address2 in /var/www/html/error-dashboard/resources/views/address2.blade.php on line 2
+    [19-Aug-2025 11:51:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:52:25 UTC] PHP Deprecated:  Function mysql_query() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 300
+    [19-Aug-2025 11:53:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mb_detect_encoding() in /var/www/html/error-dashboard/app/Helpers/StringHelper.php:65
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/StringHelper.php on line 65
+    [19-Aug-2025 11:53:55 UTC] PHP Notice:  Undefined variable: shipment2 in /var/www/html/error-dashboard/resources/views/shipment2.blade.php on line 3
+    [19-Aug-2025 11:54:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:55:25 UTC] PHP Deprecated:  Function create_function() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 310
+    [19-Aug-2025 11:56:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function password_get_info() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:100
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 100
+    [19-Aug-2025 11:56:55 UTC] PHP Notice:  Undefined variable: invoice2 in /var/www/html/error-dashboard/resources/views/invoice2.blade.php on line 2
+    [19-Aug-2025 11:57:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/error-dashboard/app/Controllers/ErrorController.php on line 45
+    [19-Aug-2025 11:58:25 UTC] PHP Deprecated:  Function split() is deprecated in /var/www/html/error-dashboard/app/Helpers/legacy.php on line 320
+    [19-Aug-2025 11:59:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function openssl_pkey_new() in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php:110
+    Stack trace:
+    #0 {main}
+        thrown in /var/www/html/error-dashboard/app/Helpers/SecurityHelper.php on line 110
+    [19-Aug-2025 11:59:55 UTC] PHP Notice:  Undefined variable: payment2 in /var/www/html/error-dashboard/resources/views/payment2.blade.php on line 5
