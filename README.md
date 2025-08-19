@@ -1,5 +1,7 @@
 # PHP Error Dashboard
 
+![PHP Error Dashboard screenshot](1.png)
+
 Lightweight tool to parse PHP error logs and inspect results in a simple web UI.
 
 Clone
@@ -28,3 +30,7 @@ Notes
 
 - `parse-errors.php` reads `error.log` and emits JSON objects with: `timestamp`, `type`, `message`, `file`, `line`.
 - For production use with large logs consider adding server-side pagination, indexing (SQLite), or caching.
+
+Feedback & contributions
+
+Issues, suggestions or pull requests are welcome — please open them on GitHub. I appreciate feedback and contributions to improve parsing, performance, and UX.
