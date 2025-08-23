@@ -211,9 +211,8 @@
     }
 
     .theme-toggle {
-        background: none;
+        background: var(--button-bg);
         border: none;
-        font-size: 24px;
         cursor: pointer;
         padding: 0;
         width: 40px;
@@ -221,8 +220,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-        background-color: var(--control-bg);
+        border-radius: 4px;
+        color: white;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 2px 5px var(--shadow-color);
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--shadow-color);
+    }
+
+    .theme-toggle svg {
+        width: 22px;
+        height: 22px;
+        transition: transform 0.5s ease;
     }
 
     table {
@@ -323,6 +337,17 @@
         transition: transform 0.2s ease;
     }
 
+    /* Error message link styling */
+    .error-message-link {
+        cursor: pointer;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .error-message-link:hover {
+        text-decoration: underline;
+    }
+
     #loader {
         display: none;
     }
@@ -334,7 +359,25 @@
         <h1>PHP Error Dashboard</h1>
         <div class="header-right">
             <div class="about-link" id="about-btn">About</div>
-            <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode">Toggle Theme</button>
+            <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="light-icon">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark-icon"
+                    style="display:none">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
         </div>
     </div>
 
@@ -454,13 +497,19 @@
 
         tbody.innerHTML = rows.map(r => {
             const severityClass = escapeClass(r.type || '');
+            const errorMessage = escapeHtml(r.message || '');
+            const searchQuery = encodeURIComponent(`php ${r.type} ${r.message} how to solve`);
 
             return `<tr class="${severityClass}">
                 <td>${escapeHtml(r.timestamp||'')}</td>
                 <td class="${severityClass}">
                     <span class="severity-text">${escapeHtml(r.type||'')}</span>
                 </td>
-                <td><pre style="white-space:pre-wrap;margin:0">${escapeHtml(r.message||'')}</pre></td>
+                <td>
+                    <a href="https://www.google.com/search?q=${searchQuery}" target="_blank" class="error-message-link" title="Search for solutions to this error">
+                        <pre style="white-space:pre-wrap;margin:0">${errorMessage}</pre>
+                    </a>
+                </td>
                 <td>${escapeHtml(r.file||'')}</td>
                 <td>${escapeHtml(r.line||'')}</td>
             </tr>`;
@@ -489,28 +538,42 @@
 
     // Dark mode toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
+    const lightIcon = themeToggle.querySelector('.light-icon');
+    const darkIcon = themeToggle.querySelector('.dark-icon');
 
     // Check for saved theme preference or respect OS preference
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
 
+    function updateThemeIcons(isDark) {
+        if (isDark) {
+            lightIcon.style.display = 'none';
+            darkIcon.style.display = 'block';
+        } else {
+            lightIcon.style.display = 'block';
+            darkIcon.style.display = 'none';
+        }
+    }
+
+    // Apply initial theme
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.body.classList.add('dark-mode');
+        updateThemeIcons(true);
+    } else {
+        updateThemeIcons(false);
     }
 
     // Toggle theme
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+
+        // Update icons
+        updateThemeIcons(isDark);
 
         // Save preference
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // About modal functionality
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }); // About modal functionality
     const aboutBtn = document.getElementById('about-btn');
     const aboutModal = document.getElementById('about-modal');
     const closeModal = document.getElementById('close-modal');
