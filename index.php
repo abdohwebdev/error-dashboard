@@ -69,6 +69,60 @@
         margin-bottom: 20px;
     }
 
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .about-link {
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--button-bg);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .about-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-content {
+        background-color: var(--bg-color);
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+    }
+
+    .close-modal {
+        cursor: pointer;
+        font-size: 22px;
+        background: none;
+        border: none;
+        color: var(--text-color);
+    }
+
     .controls {
         display: flex;
         flex-wrap: wrap;
@@ -106,6 +160,18 @@
         opacity: 0.6;
     }
 
+    .severity-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+    }
+
+    .custom-select {
+        position: relative;
+        min-width: 180px;
+    }
+
     select,
     button {
         padding: 8px 12px;
@@ -115,6 +181,17 @@
         color: var(--text-color);
         font-size: 14px;
         transition: all 0.2s;
+    }
+
+    .custom-select select {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        padding-right: 30px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 1em;
     }
 
     button {
@@ -205,6 +282,47 @@
         background: var(--deprecated-bg);
     }
 
+    /* Enhanced severity styling */
+    .severity-text {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    tr.fatal-error td.fatal-error .severity-text {
+        background: rgba(183, 28, 28, 0.2);
+        border-left: 3px solid var(--fatal-error-color);
+        padding-left: 8px;
+    }
+
+    tr.warning td.warning .severity-text {
+        background: rgba(245, 127, 23, 0.2);
+        border-left: 3px solid var(--warning-color);
+        padding-left: 8px;
+    }
+
+    tr.notice td.notice .severity-text {
+        background: rgba(21, 101, 192, 0.2);
+        border-left: 3px solid var(--notice-color);
+        padding-left: 8px;
+    }
+
+    tr.deprecated td.deprecated .severity-text {
+        background: rgba(106, 27, 154, 0.2);
+        border-left: 3px solid var(--deprecated-color);
+        padding-left: 8px;
+    }
+
+    /* Severity badges animation on hover */
+    .severity-text:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
+    }
+
     #loader {
         display: none;
     }
@@ -214,21 +332,49 @@
 <body>
     <div class="app-header">
         <h1>PHP Error Dashboard</h1>
-        <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode">🌙</button>
+        <div class="header-right">
+            <div class="about-link" id="about-btn">About</div>
+            <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode">Toggle Theme</button>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="about-modal" id="about-modal">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>About PHP Error Dashboard</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <p>PHP Error Dashboard is a lightweight tool for parsing and analyzing PHP error logs.</p>
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Parse PHP error logs</li>
+                <li>Filter by error type and text</li>
+                <li>Sort by various properties</li>
+                <li>Visual categorization of error types</li>
+            </ul>
+            <p><strong>Repository:</strong> <a href="https://github.com/M9nx/error-dashboard" target="_blank">GitHub -
+                    M9nx/error-dashboard</a></p>
+            <p><strong>License:</strong> MIT</p>
+        </div>
     </div>
     <div class="controls">
         <div class="search-box">
             <input id="search" placeholder="Search messages, files, caches.....">
         </div>
-        <label>Severity:
-            <select id="severity">
-                <option value="">(all)</option>
-                <option>Fatal error</option>
-                <option>Warning</option>
-                <option>Notice</option>
-                <option>Deprecated</option>
-            </select>
-        </label>
+        <div class="severity-wrapper">
+            <label for="severity">Severity:</label>
+            <div class="custom-select">
+                <select id="severity">
+                    <option value="">(all)</option>
+                    <option value="Fatal error">Fatal error</option>
+                    <option value="Warning">Warning</option>
+                    <option value="Notice">Notice</option>
+                    <option value="Deprecated">Deprecated</option>
+                </select>
+            </div>
+        </div>
         <button id="refresh">Refresh</button>
         <span id="loader">Loading…</span>
     </div>
@@ -306,13 +452,19 @@
             return a[sortKey] > b[sortKey] ? sortDir : -sortDir;
         });
 
-        tbody.innerHTML = rows.map(r => `<tr class="${escapeClass(r.type||'')}">
-        <td>${escapeHtml(r.timestamp||'')}</td>
-        <td class="${escapeClass(r.type||'')}">${escapeHtml(r.type||'')}</td>
-        <td><pre style="white-space:pre-wrap;margin:0">${escapeHtml(r.message||'')}</pre></td>
-        <td>${escapeHtml(r.file||'')}</td>
-        <td>${escapeHtml(r.line||'')}</td>
-      </tr>`).join('');
+        tbody.innerHTML = rows.map(r => {
+            const severityClass = escapeClass(r.type || '');
+
+            return `<tr class="${severityClass}">
+                <td>${escapeHtml(r.timestamp||'')}</td>
+                <td class="${severityClass}">
+                    <span class="severity-text">${escapeHtml(r.type||'')}</span>
+                </td>
+                <td><pre style="white-space:pre-wrap;margin:0">${escapeHtml(r.message||'')}</pre></td>
+                <td>${escapeHtml(r.file||'')}</td>
+                <td>${escapeHtml(r.line||'')}</td>
+            </tr>`;
+        }).join('');
 
         count.textContent = `showing ${rows.length} of ${data.length} parsed`;
     }
@@ -344,23 +496,38 @@
 
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.body.classList.add('dark-mode');
-        themeToggle.textContent = '☀️';
     }
 
     // Toggle theme
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
 
-        // Update button icon
+        // Save preference
         if (document.body.classList.contains('dark-mode')) {
-            themeToggle.textContent = '☀️';
             localStorage.setItem('theme', 'dark');
         } else {
-            themeToggle.textContent = '🌙';
             localStorage.setItem('theme', 'light');
         }
     });
 
+    // About modal functionality
+    const aboutBtn = document.getElementById('about-btn');
+    const aboutModal = document.getElementById('about-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    aboutBtn.addEventListener('click', () => {
+        aboutModal.style.display = 'flex';
+    });
+
+    closeModal.addEventListener('click', () => {
+        aboutModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === aboutModal) {
+            aboutModal.style.display = 'none';
+        }
+    });
     q.addEventListener('input', render);
     severity.addEventListener('change', render);
     refresh.addEventListener('click', load);
