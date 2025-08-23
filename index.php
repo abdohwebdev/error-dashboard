@@ -125,7 +125,8 @@
 
     .controls {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        /* Changed to nowrap to keep items inline */
         gap: 12px;
         align-items: center;
         margin-bottom: 18px;
@@ -137,7 +138,10 @@
 
     .search-box {
         position: relative;
-        flex-grow: 1;
+        width: calc(100% - 350px);
+        /* Fixed width, leaving space for severity and other elements */
+        min-width: 200px;
+        /* Minimum width for smaller screens */
     }
 
     .search-box input {
@@ -165,11 +169,20 @@
         align-items: center;
         position: relative;
         min-width: 140px;
+        width: auto;
+        /* Allow natural width */
+        margin-left: auto;
+        /* Push to the right if space available */
+        flex-shrink: 0;
+        /* Prevent shrinking */
     }
 
     .custom-select {
         position: relative;
-        min-width: 180px;
+        width: 150px;
+        /* Fixed width */
+        flex-shrink: 0;
+        /* Prevent shrinking */
     }
 
     select,
@@ -215,6 +228,16 @@
         font-weight: 500;
         min-width: 80px;
         justify-content: center;
+        flex-shrink: 0;
+        /* Prevent shrinking */
+        white-space: nowrap;
+        /* Prevent text wrapping */
+    }
+
+    /* Additional styling for the refresh button */
+    button#refresh {
+        width: 90px;
+        /* Fixed width */
     }
 
     button:hover {
@@ -359,6 +382,32 @@
         text-decoration: underline;
     }
 
+    /* Responsive styles */
+    @media screen and (max-width: 992px) {
+        .controls {
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .severity-wrapper {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .controls {
+            padding: 10px;
+        }
+
+        .custom-select {
+            width: 120px;
+        }
+    }
+
     #loader {
         display: none;
     }
@@ -408,8 +457,9 @@
                 <li>Sort by various properties</li>
                 <li>Visual categorization of error types</li>
             </ul>
-            <p><strong>Repository:</strong> <a href="https://github.com/M9nx/error-dashboard" target="_blank">GitHub -
-                    M9nx/error-dashboard</a></p>
+            <p><strong>Repository:</strong> <a href="https://github.com/abdohwebdev/error-dashboard"
+                    target="_blank">GitHub -
+                    abdohwebdev/error-dashboard</a></p>
             <p><strong>License:</strong> MIT</p>
         </div>
     </div>
