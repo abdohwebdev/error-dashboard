@@ -163,8 +163,8 @@
     .severity-wrapper {
         display: flex;
         align-items: center;
-        gap: 8px;
         position: relative;
+        min-width: 140px;
     }
 
     .custom-select {
@@ -192,6 +192,17 @@
         background-repeat: no-repeat;
         background-position: right 10px center;
         background-size: 1em;
+    }
+
+    .custom-select select option[disabled] {
+        color: var(--text-color);
+        font-weight: 500;
+    }
+
+    .custom-select select option:first-of-type {
+        font-style: italic;
+        color: var(--text-color);
+        opacity: 0.7;
     }
 
     button {
@@ -407,9 +418,9 @@
             <input id="search" placeholder="Search messages, files, caches.....">
         </div>
         <div class="severity-wrapper">
-            <label for="severity">Severity:</label>
             <div class="custom-select">
                 <select id="severity">
+                    <option value="" disabled selected>Severity</option>
                     <option value="">(all)</option>
                     <option value="Fatal error">Fatal error</option>
                     <option value="Warning">Warning</option>
@@ -463,7 +474,9 @@
 
     function matches(item) {
         const term = q.value.trim().toLowerCase();
-        if (severity.value && item.type !== severity.value) return false;
+        const selectedSeverity = severity.value;
+        // Skip the disabled placeholder option
+        if (selectedSeverity && selectedSeverity !== "disabled" && item.type !== selectedSeverity) return false;
         if (!term) return true;
         return (item.message || '').toLowerCase().includes(term) ||
             (item.file || '').toLowerCase().includes(term) ||
