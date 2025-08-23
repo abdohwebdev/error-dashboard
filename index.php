@@ -656,7 +656,14 @@
     });
     q.addEventListener('input', render);
     severity.addEventListener('change', render);
-    refresh.addEventListener('click', load);
+    refresh.addEventListener('click', () => {
+        // Reset search input
+        q.value = '';
+        // Reset severity dropdown to placeholder
+        severity.selectedIndex = 0;
+        // Reload data
+        load();
+    });
 
     // initial load
     load();
